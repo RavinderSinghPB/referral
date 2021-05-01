@@ -1,9 +1,10 @@
-import string
 import random
-from django.db import models
-from django.contrib.auth.models import AbstractUser
-from django.db.models import SET_NULL
+import string
+
 from django.contrib.auth.base_user import BaseUserManager
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+from django.db.models import SET_NULL
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -25,9 +26,7 @@ class UserManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password, **extra_fields):
-        """
-        Create and save a SuperUser with the given email and password.
-        """
+
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('is_active', True)
@@ -66,3 +65,5 @@ def randCode():  # todo: efficient algo  to generate unique random sequential-pa
             rcodeObj = ReferCode.objects.create(code=res)
             unique = True
             return rcodeObj
+
+        res = ''.join(random.choices(string.ascii_uppercase + string.digits, k=N))

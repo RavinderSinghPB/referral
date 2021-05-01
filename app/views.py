@@ -64,10 +64,6 @@ def register_user(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
 
-            # username = form.cleaned_data.get('username')
-            # password = form.cleaned_data.get('password1')
-            # code = form.cleaned_data.get('referCode')
-
             userForm = form.save(commit=False)
             userForm.user_refer_code = randCode()
             userForm.save()

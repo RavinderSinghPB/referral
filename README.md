@@ -1,12 +1,12 @@
-# [Referral Site]
+# Referral Site
 
-> Features
+>## Features
 
-- ## user can signup with referral-code and earn point, 'if code is correct'
-- ## more api available at `http://127.0.0.1:8000/api/`
-- ## user can see, how many users has used his code to signup, and point earned ,at `http://127.0.0.1:8000/profile/`
-- ## api to check all users signup with a referCode 
-- ## an user earn through referring other user 
+- ### user can signup with referral-code and earn point, 'if code is correct'
+- ### more api available at `http://127.0.0.1:8000/api/`
+- ### user can see, how many users has used his code to signup, and point earned ,at `http://127.0.0.1:8000/profile/`
+- ### api to check all users signup with a referCode 
+- ### an user earn through referring other user 
   
 
 ## Packages Used 
@@ -21,14 +21,17 @@ $ # Get the code
 $ git clone https://github.com/RavinderSinghPB/referral.git
 $
 $ # Virtualenv modules installation (Unix based systems)
-$ virtualenv env
-$ source env/bin/activate
+$ virtualenv -p python3 refenv
+$ source refenv/bin/activate
 $
 $ # Virtualenv modules installation (Windows based systems)
-$ # virtualenv env
-$ # .\env\Scripts\activate
+$ # virtualenv refenv
+$ # .\refenv\Scripts\activate
 $
-$ # Install modules - SQLite Storage
+$ # go to project directory
+$ cd referral
+$ 
+$ # Install required packages/modules 
 $ pip3 install -r requirements.txt
 $
 $ # Create tables
