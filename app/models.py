@@ -13,14 +13,10 @@ class ReferCode(models.Model):
 
 class UserManager(BaseUserManager):
     """
-    Custom user model manager where email is the unique identifiers
-    for authentication instead of usernames.
+    Custom user model manager where to create user_refer_code.
     """
 
     def create_user(self, username, email, password, **extra_fields):
-        """
-        Create and save a User with the given email and password.
-        """
 
         email = self.normalize_email(email)  # todo: make case insensitive
         user = self.model(username=username, email=email, **extra_fields)
@@ -51,7 +47,7 @@ class User(AbstractUser):
     '''
     earned point can also be added here. but in this ,it is calculated by
     filtering user having used_refer_code = self.user_refer_code. as defined in view.UserViewSet point_earned.
-    pros: one less tables
+    pros: one less row
     cons: 1> filtering user will take time,
           2> if referred user deleted, it will give less earned point then actual earned point.
     '''

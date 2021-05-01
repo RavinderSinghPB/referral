@@ -2,11 +2,11 @@
 
 > Features
 
-- ##user can signup with referral-code and earn point, 'if code is correct'
-- ##more api available at `http://127.0.0.1:8000/api/`
-- ##user can see, how many users has used his code to signup, and point earned ,at `http://127.0.0.1:8000/profile/`
-- ##api to check all users signup with a referCode 
-- ##an user earn through referring other user 
+- ## user can signup with referral-code and earn point, 'if code is correct'
+- ## more api available at `http://127.0.0.1:8000/api/`
+- ## user can see, how many users has used his code to signup, and point earned ,at `http://127.0.0.1:8000/profile/`
+- ## api to check all users signup with a referCode 
+- ## an user earn through referring other user 
   
 
 ## Packages Used 
@@ -44,7 +44,7 @@ $ # Access the web app in browser: http://127.0.0.1:8000/
 
 ## Try out! 
 
-- ###all users signup with a referCode `http://127.0.0.1:8000/api/referrer-code/<code>/codeUsedBy/` where `<code>` is referrer code
+- ### all users signup with a referCode `http://127.0.0.1:8000/api/referrer-code/<code>/codeUsedBy/` where `<code>` is referrer code
     ![users signup with a referCode](z-readmdpic/Refer-Code-usedBy-–-Django-REST-framework.png)
-- ###an user earn through referring other user `http://127.0.0.1:8000/api/users/pk/point_earn/` where 'pk' is primery-key of user
+- ### an user earn through referring other user `http://127.0.0.1:8000/api/users/pk/point_earn/` where 'pk' is primery-key of user
     ![users signup with a referCode](z-readmdpic/User-point-–-Django-REST-framework.png)
