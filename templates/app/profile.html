@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+
+<p>userid: {{ user.username }}</p>
+<p>email: {{ user.email }}</p>
+<p>use your Referral code <b>{{ user.user_refer_code.code }} </b>and invite friend to earn point</p>
+
+
+<p>no of user used your referrer code {{ no_of_referrals }}</p>
+<p>point earned {{ point_earned_by_refer }}</p>
+
+	<a href = "{% url 'logout' %}">logout</a>
+	{% else %}
+	you are not logged
+	<a href = "{% url 'signup' %}">Signup</a><br>
+	<a href = "/apilogin/">Login</a>
+{% endif %}
+</body>
+</html>

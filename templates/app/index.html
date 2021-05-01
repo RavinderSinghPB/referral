@@ -1,0 +1,38 @@
+{% load rest_framework %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+</head>
+<body>
+
+
+<div class="container my-4 pt-4">
+
+
+<a href = "{% url 'signup' %}">Signup</a><br>
+<a href = "/apilogin/">Login</a>
+
+	<br>
+<i>before signup open api link and pick already defined user referer code, "its not required". if you put wrong code it will throw error </i>
+
+<p>
+	API to check who all users signup with a referCode<br> and
+API to check how many points does user earn through referring other user
+	<a><a href = "/api/">Available here</a></a>
+</p>
+
+
+<p>all users signup with a referCode   <b>/api/referrer-code/<i>code</i>/codeUsedBy/</b> <br>
+where 'code' is referrrer code</p>
+
+<p>user earn through referring other user   <b>api/users/pk/point_earn/</b> <br>
+where 'pk' is primery-key of user</p>
+
+
+</div>
+
+</body>
+</html>
